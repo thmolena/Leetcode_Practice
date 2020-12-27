@@ -1,0 +1,65 @@
+Given a singly linked list, determine if it is a palindrome.
+
+Example 1:
+
+Input: 1->2
+Output: false
+Example 2:
+
+Input: 1->2->2->1
+Output: true
+
+#Solution 
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def isPalindrome(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        self.head = head
+        transverse = []
+        current = head
+        
+        if current == None:
+            return True
+           
+    
+        while (current != None):
+                #transfer everything into a list
+                transverse.append(current.val)
+                current = current.next     
+            
+           
+        
+        
+        for x in range (len(transverse)):
+            if len(transverse)%2 == 0:  
+                #If the size is even
+                spot = 0
+                
+                while spot <= len(transverse)/2 :
+                    if transverse[spot] == transverse[len(transverse)-1-spot]:
+                        spot +=1
+                        continue
+                    else:
+                        return False
+                    
+                return True
+            else: #If the size is odd
+                spot = 0
+                
+                while spot < (len(transverse)/2 ) :
+                    print (transverse, spot)
+                    if transverse[spot] == transverse[len(transverse)- 1 - spot]:
+                        spot +=1
+                        continue
+                        
+                    else:
+                        return False
+                return True
+        
