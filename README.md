@@ -1,6 +1,4 @@
-https://hackmd.io/team/leetcoders
-# 2020_leetcode_group
-This is for tracking our progress in Technical Interview Preparation
+This is for tracking my progress in Technical Interview Preparation
 - [ ] Strings -- look into dynamic programming too
    *https://leetcode.com/tag/string/
   * How do you reverse a given string in place? # 151, 186, 344, 345, 541, 557, 917
